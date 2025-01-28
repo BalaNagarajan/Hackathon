@@ -1,0 +1,26 @@
+pdf_rag_task:
+  description: >
+    Answer the following questions based on PDF content:
+  expected_output: >
+    The rag agent will search throught the PDF and return the most relevant information..
+    Your final output should be based on the information you found in the PDF.
+
+     Here is the question: {input}
+
+  agent: pdf_rag_agent
+
+theme_classifier_task:
+  description: >
+    Classify the content of the PDF into the correct theme or category.
+  expected_output: >
+    Clear classification of the PDF content into the correct theme or category.
+  agent: theme_classifier_agent
+
+recommendation_task:
+  description: >
+    Based on the PDF content and theme classification, write a recommendation with the themes.
+  expected_output: >
+    A fully fledged report written with the recommendation with the themes.
+    Formatted as markdown without '```'
+  agent: recommendation_agent
+
