@@ -41,10 +41,10 @@ with col1:
         
         # Create a DataFrame for the table
         equity_data = {
-            "Col1": ["Theme1", "Row2", "Row3"],
-            "Col2": ["Theme2", "Row2", "Row3"],
-            "Col3": ["Theme3", "Row2", "Row3"],
-            "Col4": ["Theme4", "Row2", "Row3"]
+            "NAME": ["Uranium and nuclear", "Bond proxies", "Infrastructure"],
+            "YTD%": ["10%", "4%", "3%"],
+            "1YR%" : ["30%", "50%", "5%"],
+            "UNIQUE SC" : ["0.9", "0.6", "0.8"]
         }
         df_equity = pd.DataFrame(equity_data)
 
@@ -54,11 +54,11 @@ with col1:
         ## Adding the pop up screen to display the time series - Starts
          
          # Create a selectbox to choose a theme
-        selected_theme = st.selectbox("Select a theme to view time series data:", df_equity["Col1"])
+        selected_theme = st.selectbox("Select a theme to view time series data:", df_equity["NAME"])
         
         # Display the time series data if "Theme1" is selected
-        if selected_theme == "Theme1":
-            st.write("Time Series Data for Theme1")
+        if selected_theme == "Uranium and nuclear":
+            st.write("Time Series Data for Uranium and nuclear")
             
             # Hardcoded time series data
             time_series_data = {
@@ -81,10 +81,10 @@ with col1:
 
         # Create a DataFrame for the table
         fixed_data = {
-            "Col1": ["Row1", "Row2", "Row3"],
-            "Col2": ["Row1", "Row2", "Row3"],
-            "Col3": ["Row1", "Row2", "Row3"],
-            "Col4": ["Row1", "Row2", "Row3"]
+            "NAME": ["HIGH YIELD CONVEXITY", "California Munis"],
+            "YTD%": ["12%", "11%"],
+            "1YR%": ["11%", "12%"],
+            "UNIQUE SC": ["0.4", "0.4"]
         }
         df_fixed = pd.DataFrame(fixed_data)
          # Display the table
@@ -95,10 +95,10 @@ with col1:
         
           # Create a DataFrame for the table
         multi_asset_data = {
-            "Col1": ["Row1", "Row2", "Row3"],
-            "Col2": ["Row1", "Row2", "Row3"],
-            "Col3": ["Row1", "Row2", "Row3"],
-            "Col4": ["Row1", "Row2", "Row3"]
+            "NAME": ["LA Recovery"],
+            "YTD%": ["-10%"],
+            "1YR%": ["1%"],
+            "UNIQUE SC": ["0.99"]
         }
         df_multi_asset = pd.DataFrame(multi_asset_data)
          # Display the table
@@ -110,10 +110,10 @@ with col1:
 
          # Create a DataFrame for the table
         alternatives_data = {
-            "Col1": ["Row1", "Row2", "Row3"],
-            "Col2": ["Row1", "Row2", "Row3"],
-            "Col3": ["Row1", "Row2", "Row3"],
-            "Col4": ["Row1", "Row2", "Row3"]
+            "NAME": ["Row1", "Row2", "Row3"],
+            "YTD": ["Row1", "Row2", "Row3"],
+            "1YR%": ["Row1", "Row2", "Row3"],
+            "UNIQUE SC": ["Row1", "Row2", "Row3"]
         }
         df_alternatives = pd.DataFrame(alternatives_data)
          # Display the table
