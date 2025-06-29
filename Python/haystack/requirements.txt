@@ -1,0 +1,8 @@
+haystack-ai
+datasets
+ollama-haystack
+gradio
+farm-haystack
+pypdf
+PyPDF2
+
